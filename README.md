@@ -12,7 +12,8 @@ JUST LIKE A DEMON 😈
 
 ### Deploy To Heroku
 
-[![Deploy+On+Heroku][(https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/https://github.com/Noob-savvy/Ban-all-Userbot )
+
+<p align="center"><a href="https://dashboard.heroku.com/new?template=[https://github.com/Noob-savvy/Ban-all-Userbot]"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 ## Deploy
@@ -28,7 +29,9 @@ You can Deploy Easily Fork repo and Give Start
 
 ## INSTAGRAM 📺
 
-[YouTube Channel](https://www.instagram.com/noob_savvy)
+[INSTAGRAM](https://www.instagram.com/noob_savvy)
+
+
 
 
 #### 🥺 Copy Pasters You Can Copy This Repo But Must Give Credits ...
