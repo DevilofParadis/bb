@@ -1,0 +1,21 @@
+{
+    "name": " Ban All Userbot",
+    "logo": "https://graph.org/file/1d144049b390f26d70357.jpg",
+    "keywords": [
+      "telegram",
+      "bot",
+      "noob-savvy"
+      "userbot"
+    ],
+      "buildpacks": [{
+      "url": "heroku/python"
+    }],
+    "env": {
+        "SESSION": {
+            "value": ""
+        },
+        "SUDO_USERS": {
+            "value": ""
+        }
+    }
+  }
