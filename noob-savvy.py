@@ -22,7 +22,7 @@ async def start(_, message: Message):
 async def altron(app: Client, message: Message):
     try:
         chat_id = message.text.split(" ")[1]
-        m = await message.reply_text("🔁 __✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨PREPARING COMMANDER ........__")
+        m = await message.reply_text("🔁 __✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨\n GETTING READY COMMANDER ........__")
         if chat_id in CHATS:
             return
     except:
