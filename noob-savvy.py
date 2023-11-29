@@ -29,7 +29,7 @@ async def altron(app: Client, message: Message):
         await message.reply_text("**Usage:**\n`/fuck [chat_id]`")
         return
 
-    await m.edit_text("✅ __✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨ STARTED REMOVING MEMBERS FROM GROUP 🤫 🤖 ✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨...__")
+    await m.edit_text("✅ __✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨\n STARTED REMOVING MEMBERS FROM GROUP 🤫 🤖\n ✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨...__")
     await sleep(3)
 
     async for x in app.iter_chat_members(chat_id):
