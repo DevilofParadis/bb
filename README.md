@@ -6,7 +6,7 @@ JUST LIKE A DEMON 😈
  A CUTE KID WHO WANNA TO LEARN CODING TRUST ME HE IS REALLY CUTE 
 
 
-<p align="center"><a href="https://t.me/✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨"><img src="https://graph.org/file/1d144049b390f26d70357.jpg"></a></p>
+<p align="center"><a href="https://t.me/✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨"><img src="https://te.legra.ph/file/7d886c6c27ceaa36a96c9.png"></a></p>
 
 
 
@@ -37,7 +37,7 @@ You can Deploy Easily Fork repo and Give Start
 #### 🥺 Copy Pasters You Can Copy This Repo But Must Give Credits ...
 
 ###  Owner Of This Repository 🇮🇳
-[![NOOB_SAVVY](https://graph.org/file/1d144049b390f26d70357.jpg)](https://t.me/noob_savvy)
+[![NOOB_SAVVY](https://te.legra.ph/file/374de46e864e19814a6c0.mp4)](https://t.me/noob_savvy)
 
 
 #### Main Developer = [noob_savvy](https://t.me/noob_savvy)
