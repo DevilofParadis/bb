@@ -1,7 +1,9 @@
 from os import getenv
 from asyncio import sleep
 
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
+from pyrogram.enums import ChatMemberStatus
+from pyrogram.errors import FloodWait, RPCError
 from pyrogram.types import Message
 
 
@@ -32,17 +34,18 @@ async def altron(app: Client, message: Message):
     await m.edit_text("✅ __✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨\n STARTED REMOVING MEMBERS FROM GROUP 🤫 🤖\n ✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨...__")
     await sleep(3)
 
-    async for x in app.iter_chat_members(chat_id):
-        if x.user.id in SUDO_USERS:
+    async for member in app.get_chat_members(chat_id):
+        if member.user.id in SUDO_USERS or member.status not in [ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
             continue
         try:
-            await app.ban_chat_member(chat_id=chat_id, user_id=x.user.id)
-        except:
-            pass
-
+            await app.ban_chat_member(chat_id=chat_id, user_id=member.user.id)
+        except FloodWait as e:
+            await sleep(3)  # Wait x seconds before continuing
+        except RPCError as e:
+            pass  # Handle other possible exceptions
 
 M.start()
 M.join_chat("noob_savvy_official")
 print("✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨ Started Successfully")
-idle()
+M.idle()
 M.stop()
