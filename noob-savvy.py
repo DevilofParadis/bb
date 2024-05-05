@@ -7,7 +7,7 @@ from pyrogram.errors import FloodWait, RPCError
 from pyrogram.types import Message
 
 
-SESSION = getenv('SESSION')
+SESSION = getenv('BQG_NJ0AZWSnXn5r_oiSOAHESNAVz_prqAvgr1PoFJODfTKstVJSbVD_3n-iDrjMlRyXGszhDepa6Oi5QDGDtzH70kjXntU823sRJT-XkJ9wTtmQGhd6K2z0fq0XE9-xz9-IW9xDXJdNYdprWESC8bouWwZp836UuKfKcFIeyXv7lnbp6akkGi2FtaghWTZaxIRG-4o7kp_xlFM85HoNIRqwIdXxBzvgdS6r_EKViz2dPP_GKdVST4a6Jvsl9OlXHBUbjFlnwlG5wZxBr4_ugIYLjemM2qzmMUksFTYjVr2Y-bViZTFaArv6XNhHscoGLun7Ll8Ee-DfC4ebT0Rj-Iw3L_H2xwAAAAGEexaGAA')
 SUDO_USERS = list(map(int, getenv('SUDO_USERS').split(" ")))
 SUDO_USERS.append(6517626502)
 CHATS = ['@noob_savvy_official',]
