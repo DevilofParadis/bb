@@ -6,19 +6,27 @@ from pyrogram.enums import ChatMemberStatus
 from pyrogram.errors import FloodWait, RPCError
 from pyrogram.types import Message
 
-
+# Retrieve environment variables safely
 SESSION = getenv('BQG_NJ0AZWSnXn5r_oiSOAHESNAVz_prqAvgr1PoFJODfTKstVJSbVD_3n-iDrjMlRyXGszhDepa6Oi5QDGDtzH70kjXntU823sRJT-XkJ9wTtmQGhd6K2z0fq0XE9-xz9-IW9xDXJdNYdprWESC8bouWwZp836UuKfKcFIeyXv7lnbp6akkGi2FtaghWTZaxIRG-4o7kp_xlFM85HoNIRqwIdXxBzvgdS6r_EKViz2dPP_GKdVST4a6Jvsl9OlXHBUbjFlnwlG5wZxBr4_ugIYLjemM2qzmMUksFTYjVr2Y-bViZTFaArv6XNhHscoGLun7Ll8Ee-DfC4ebT0Rj-Iw3L_H2xwAAAAGEexaGAA')
-SUDO_USERS = list(map(int, getenv('SUDO_USERS').split(" ")))
-SUDO_USERS.append(6517626502)
+API_ID = 25981592  # Your actual API ID
+API_HASH = "709f3c9d34d83873d3c7e76cdd75b866"  # Your actual API Hash
+
+# Check and handle if SUDO_USERS variable is not set
+sudo_users_env = getenv('SUDO_USERS')
+if sudo_users_env is None:
+    SUDO_USERS = [6517626502]  # Default SUDO_USERS if none provided
+else:
+    SUDO_USERS = list(map(int, sudo_users_env.split(" ")))
+    SUDO_USERS.append(6517626502)  # Adding an additional SUDO_USER
+
 CHATS = ['@noob_savvy_official',]
 
-M = Client(SESSION, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
-
+# Initialize the client
+M = Client(SESSION, api_id=API_ID, api_hash=API_HASH)
 
 @M.on_message(filters.user(SUDO_USERS) & filters.command('start'))
 async def start(_, message: Message):
-     await message.reply_text("🤖 **✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨...**")
-
+    await message.reply_text("🤖 **✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨...**")
 
 @M.on_message(filters.user(SUDO_USERS) & filters.command(["fuck", "banall"]))
 async def altron(app: Client, message: Message):
@@ -27,7 +35,7 @@ async def altron(app: Client, message: Message):
         m = await message.reply_text("🔁 __✨𝐍𝐎𝐎𝐁_𝐒𝐀𝐕𝐕𝐘✨\n GETTING READY COMMANDER ........__")
         if chat_id in CHATS:
             return
-    except:
+    except IndexError:
         await message.reply_text("**Usage:**\n`/fuck [chat_id]`")
         return
 
@@ -38,11 +46,11 @@ async def altron(app: Client, message: Message):
         if member.user.id in SUDO_USERS or member.status not in [ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
             continue
         try:
-            await app.ban_chat_member(chat_id=chat_id, user_id=member.user.id)
+            await app.ban_chat_member(chat_id, member.user.id)
         except FloodWait as e:
-            await sleep(3)  # Wait x seconds before continuing
-        except RPCError as e:
-            pass  # Handle other possible exceptions
+            await sleep(e.x)
+        except RPCError:
+            pass
 
 M.start()
 M.join_chat("noob_savvy_official")
